@@ -15,7 +15,12 @@ let precioProd = 0;
 
 // Alerta de bienvenida
 
-alert("Bienvenido! A continuación podrá ingresar el precio de su producto para conocer el saldo de dinero que obtendrá luego de vender en Mercado Libre")
+function saludar(){
+        let usuario = prompt("Ingresa tu nombre")
+        alert("Bienvenido " + usuario + "! A continuación podrá ingresar el precio de su producto para conocer el saldo de dinero que obtendrá luego de vender en Mercado Libre")
+    }
+
+saludar()
 
 // Solicitud de costo de producto y alerta
 
@@ -27,24 +32,54 @@ if (precioProd == 0){
 
 // Tipo de publicación
 
-comisión = String(prompt("Qué tipo de publicación desea realizar?"))
+const comisionesClásica = [0.87,0.85]
+const comisionesPremium = [0.685,0.69,0.67]
+const comisionesTodas = comisionesClásica.concat(comisionesPremium)
+alert("Porcentajes de comisión:")
+comisionesTodas.forEach(Element => {
+    alert(Element)
+})
 
-if(comisión == "clasica" || "clásica" || "Clasica" || "Clásica" || "CLASICA" || "CLÁSICA"){
+// alert (comisionesTodas)
+
+comisión = Number(prompt("Qué tipo de publicación desea realizar? 1)Clásica 0.87 2)Premium 0.685"))
+
+if(comisión === 1){
     precioProd = precioProd * comisiónClásica;
-}   else {
+}   
+else if(comisión === 2) {
     precioProd = precioProd * comisiónPremium;
+}
+else {
+    alert("Presiona 1 para clásica o 2 para Premium")
 }
 
 // Envío gratis?
 
-envío = String(prompt("La publicación cuenta con envío gratis?"))
+envío = Number(prompt("La publicación cuenta con envío gratis? 1)Sí 2)No"))
 
-if(envío == "si" || "sí" || "SI" || "SÍ"){
+if(envío === 1){
     precioProd = precioProd - envíoGratis;
-}   else {
+}   
+else if(envío === 2) {
     precioProd = precioProd;
+}
+else{
+    alert("Dato no válido") 
 }
 
 // Alerta final
 
 alert ("El saldo de dinero de esta publicación es de  " + precioProd);
+
+const mercadoLibre = {
+        origen: "Argentina",
+        fundación:"2 de Agosto de 1999",
+        empleados: "8500",
+        formaLegal: "Sociedad por Acciones",
+        líder: true
+}
+
+alert (mercadoLibre)
+
+// MI IDEA ACÁ ERA QUE SE MUESTRE TODA LA INFO DE LA SOCIEDAD PERO NO ME ESTARÍA FUNCIONANDO
