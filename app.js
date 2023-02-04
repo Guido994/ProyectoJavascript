@@ -22,7 +22,7 @@ function saludar(){
 
 saludar()
 
-// Solicitud de costo de producto y alerta
+// Solicitud de precio de producto y alerta
 
 precioProd = Number(prompt("Ingrese el precio de su producto a vender en Mercado Libre"));
 
@@ -83,3 +83,19 @@ const mercadoLibre = {
 alert (mercadoLibre)
 
 // MI IDEA ACÁ ERA QUE SE MUESTRE TODA LA INFO DE LA SOCIEDAD PERO NO ME ESTARÍA FUNCIONANDO.
+
+
+
+////////////////// LOGIN //////////////////////////////////
+
+function login(){
+    var user, password
+    user = document.getElementById("usuario").value;
+    password = document.getElementById("contrasenia").value;
+
+    if(user == "prueba" && password == "1234"){
+        alert("Iniciaste Sesión!")
+    } else{
+        alert("Datos incorrectos!")
+    }
+}
