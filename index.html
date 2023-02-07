@@ -9,13 +9,13 @@
 </head>
 <body>
     <div class="contenedor1">
-        <div class="form-group">
-            <input id="usuario" type="text" class="form-control" name="username" placeholder="usuario">
-            <input id="contrasenia"  type="password" class="form-control" name="password" placeholder="contrasenia">
+        <form id="formulario1" class="formRegistro">
+            <input id="usuario" type="text" name="username" placeholder="usuario">
+            <input id="contrasenia"  type="password" name="password" placeholder="contrasenia">
+            <input type="checkbox" name="" id="rememberUsername">
             <br>
-            <button id="botón" class="botón" onclick="login()"> Iniciar sesión</button>
-
-        </div>
+            <button id="iniciarSesión" class="iniciarSesión" type="submit">Iniciar sesión</button>
+        </form>
     </div>
     <script src="./app.js"></script>
 </body>

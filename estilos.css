@@ -29,7 +29,7 @@ input{
     font-size: 14px;   
 }
 
-.botón{
+.iniciarSesión{
     font-family: sans-serif;
     text-transform: uppercase;
     outline: 0;
@@ -42,7 +42,7 @@ input{
     cursor: pointer;
 }
 
-.form-group{
+.formRegistro{
     display: flex;
     flex-direction: column;
     justify-content: center;
